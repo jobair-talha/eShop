@@ -1,0 +1,12 @@
+#partners img {
+  margin: 0 auto;
+}
+#partners .slick-slider button::before {
+  color: #d84528;
+}
+#partners .slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  color: #d84528;
+}

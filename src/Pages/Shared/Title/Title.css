@@ -1,0 +1,21 @@
+.title h2 {
+  position: relative;
+}
+.title h2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 5px;
+  width: 50%;
+  height: 1px;
+  background: #d84528;
+}
+.title h2::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 1px;
+  background: #d84528;
+}

@@ -1,0 +1,17 @@
+#products .featured-item {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 15px;
+}
+#products .featured-item h6 {
+  margin-top: 10px;
+  font-size: 14px;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#products .featured-item .item:hover h6 {
+  color: #d84528;
+}

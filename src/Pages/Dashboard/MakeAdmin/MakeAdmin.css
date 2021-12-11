@@ -1,0 +1,18 @@
+.make-admin .button {
+  border: 1px solid #df4324;
+  padding: 10px 20px;
+  color: #df4324;
+  background: transparent;
+  transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -ms-transition: all linear 0.4s;
+  -o-transition: all linear 0.4s;
+}
+.make-admin .field {
+  border-color: #df4324;
+}
+.make-admin .button:hover {
+  background: #df4324;
+  color: #fff;
+}

@@ -1,0 +1,47 @@
+.nav-bg {
+  background: white !important;
+}
+nav .button {
+  border: 1px solid #df4324;
+  transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -ms-transition: all linear 0.4s;
+  -o-transition: all linear 0.4s;
+}
+nav .field {
+  border-color: #df4324;
+}
+nav .button:hover {
+  background: #df4324;
+}
+nav h5 {
+  margin: 0 !important;
+}
+nav svg {
+  font-size: 18px !important;
+  color: #df4324;
+}
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #df4324;
+}
+nav .mouse {
+  cursor: pointer;
+}
+nav .btn-border {
+  color: #df4324;
+  border: 1px solid #df4324;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+nav .btn-border:hover {
+  color: #fff !important;
+  background: #df4324;
+}

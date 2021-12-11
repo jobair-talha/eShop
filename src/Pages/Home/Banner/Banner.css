@@ -1,0 +1,45 @@
+#banner .banner-sub-text {
+  color: #fff;
+  background: #d84528;
+}
+#banner img {
+  width: 100%;
+}
+#banner .button {
+  background: #fff;
+  border: 1px solid #d84528;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#banner .button svg {
+  color: #d84528;
+}
+#banner .button:hover svg {
+  color: #fff;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#banner .button:hover {
+  background: #d84528;
+  color: #fff;
+}
+#banner .slick-prev:before,
+.slick-next:before {
+  color: #d84528;
+}
+#banner .slick-dots .slick-active button::before {
+  color: #d84528;
+}
+#banner .slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: #d84528;
+}
+#banner .slick-dots li button:before {
+  color: #212529;
+}

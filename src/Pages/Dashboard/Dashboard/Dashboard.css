@@ -1,0 +1,40 @@
+#dashboard .main {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-gap: 15px;
+}
+#dashboard .component-list {
+  background: #df4324;
+  position: relative;
+}
+#dashboard .component-list .logo-bg {
+  background: #fff;
+}
+#dashboard .component-list ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 0;
+}
+#dashboard .component-list button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+#dashboard .component-item h4 {
+  color: #df4324;
+}
+#dashboard .component-item img {
+  width: 35px;
+  height: 35px;
+  margin-left: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

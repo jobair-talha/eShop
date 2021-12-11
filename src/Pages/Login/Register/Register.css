@@ -1,0 +1,49 @@
+#register .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  height: 100vh;
+}
+#register .side {
+  background: linear-gradient(
+    90deg,
+    rgba(223, 67, 36, 1) 0%,
+    rgba(223, 67, 36, 1) 20%,
+    rgba(255, 100, 69, 1) 100%
+  );
+  text-align: center;
+}
+#register h2 {
+  font-weight: 700;
+}
+#register .side h2 {
+  color: #fff;
+}
+
+#register .side h6 {
+  color: #fff;
+}
+
+#register .side .button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+}
+#register form input {
+  background: #eee;
+  border: #eee;
+}
+#register .btn-bg {
+  background: #df4324;
+  border: 1px solid #df4324;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#register .btn-bg:hover {
+  background: #fff;
+  color: #df4324;
+}

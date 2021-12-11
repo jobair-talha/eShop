@@ -1,0 +1,17 @@
+.delete-item .field {
+  border-color: #df4324;
+  width: 80%;
+}
+.delete-item button {
+  border: 1px solid #df4324;
+  background-color: transparent;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+.delete-item button:hover {
+  color: #fff;
+  background: #df4324;
+}

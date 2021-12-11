@@ -1,0 +1,67 @@
+#login .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  height: 100vh;
+}
+#login .side {
+  background: linear-gradient(
+    90deg,
+    rgba(223, 67, 36, 1) 0%,
+    rgba(223, 67, 36, 1) 20%,
+    rgba(255, 100, 69, 1) 100%
+  );
+  text-align: center;
+}
+#login h2 {
+  font-weight: 700;
+}
+#login .side h2 {
+  color: #fff;
+}
+
+#login .side h6 {
+  color: #fff;
+}
+
+#login .side .button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+}
+#login form input {
+  background: #eee;
+  border: #eee;
+}
+#login .btn-bg {
+  background: #df4324;
+  border: 1px solid #df4324;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#login .btn-bg:hover {
+  background: #fff;
+  color: #df4324;
+}
+
+#login .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eeeeee;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
