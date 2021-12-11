@@ -8,12 +8,12 @@ import AuthProvider from "./context/AuthProvider/AuthProvider";
 import LoginRoute from "./Pages/Login/LoginRoute/LoginRoute";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome/DashboardHome";
-import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import ProductList from "./Pages/Dashboard/PorductList/ProductList";
-import Update from "./Pages/Dashboard/Update/Update";
+import UpdateProduct from "./Pages/Dashboard/UpdateProduct/UpdateProduct";
+import Orders from "./Pages/Dashboard/Orders/Orders";
 import DeleteProduct from "./Pages/Dashboard/DeleteProduct/DeleteProduct";
 
 function App() {
@@ -46,55 +46,16 @@ function App() {
                 <Dashboard />
               </AdminRoute>
             }
-          ></Route>
-          <Route
-            path="/dashboard/add-product"
-            element={
-              <AdminRoute>
-                <AddProduct />
-              </AdminRoute>
-            }
-          />
-          <Route
-            path="/dashboard/make-admin"
-            element={
-              <AdminRoute>
-                <MakeAdmin />
-              </AdminRoute>
-            }
-          />
-          <Route
-            path="/orders"
-            element={
-              <AdminRoute>
-                <DashboardHome />
-              </AdminRoute>
-            }
-          />
-          <Route
-            path="/dashboard/product-list"
-            element={
-              <AdminRoute>
-                <ProductList />
-              </AdminRoute>
-            }
-          />
-          <Route
-            path="update/:id"
-            element={
-              <AdminRoute>
-                <Update />
-              </AdminRoute>
-            }
-          />
-          <Route
-            path="/delete/:id"
-            element={
-              <PrivateRoute>
-                <DeleteProduct />
-              </PrivateRoute>
-            }
-          />
+          >
+            <Route path="/dashboard" element={<DashboardHome />} />
+            <Route path="add-product" element={<AddProduct />} />
+            <Route path="make-admin" element={<MakeAdmin />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="product-list" element={<ProductList />} />
+            <Route path="update" element={<UpdateProduct />} />
+            <Route path="update/:id" element={<UpdateProduct />} />
+            <Route path="delete/:id" element={<DeleteProduct />} />
+          </Route>
         </Routes>
       </Router>
     </AuthProvider>

@@ -1,8 +1,6 @@
 import Button from "@restart/ui/esm/Button";
 import React, { useState } from "react";
 import { Alert, Form, FormControl } from "react-bootstrap";
-import ComponentsItem from "../ComponentsItem/ComponentsItem";
-import ComponentsList from "../ComponentsList/ComponentsList";
 import "./MakeAdmin.css";
 
 const MakeAdmin = () => {
@@ -32,32 +30,22 @@ const MakeAdmin = () => {
   };
 
   return (
-    <section id="dashboard" className="px-5">
-      <div className="main">
-        <ComponentsList></ComponentsList>
-        <div>
-          <ComponentsItem></ComponentsItem>
-          <div className="make-admin mt-5">
-            {adminSuccess && (
-              <Alert variant="success">Admin Make Successfully</Alert>
-            )}
+    <div className="make-admin mt-5">
+      {adminSuccess && <Alert variant="success">Admin Make Successfully</Alert>}
 
-            <Form onSubmit={handleOnSubmit} className="pt-5 d-flex">
-              <FormControl
-                type="email"
-                placeholder="Make Admin"
-                className="me-2 w-75 field"
-                aria-label="email"
-                onBlur={handleOnBlur}
-              />
-              <Button variant="outline-danger" type="submit" className="button">
-                Make Admin
-              </Button>
-            </Form>
-          </div>
-        </div>
-      </div>
-    </section>
+      <Form onSubmit={handleOnSubmit} className="pt-5 d-flex">
+        <FormControl
+          type="email"
+          placeholder="Make Admin"
+          className="me-2 w-75 field"
+          aria-label="email"
+          onBlur={handleOnBlur}
+        />
+        <Button variant="outline-danger" type="submit" className="button">
+          Make Admin
+        </Button>
+      </Form>
+    </div>
   );
 };
 

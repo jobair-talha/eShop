@@ -1,20 +1,25 @@
 import React from "react";
-import ComponentsItem from "../ComponentsItem/ComponentsItem";
-import ComponentsList from "../ComponentsList/ComponentsList";
-import DeleteItem from "../DeleteItem/DeleteItem";
+import { useParams } from "react-router-dom";
+import "./DeleteProduct.css";
 
-const DeleteProduct = () => {
+const DeleteItem = () => {
+  const id = useParams();
   return (
-    <section id="dashboard" className="px-5">
-      <div className="main">
-        <ComponentsList></ComponentsList>
-        <div>
-          <ComponentsItem></ComponentsItem>
-          <DeleteItem></DeleteItem>
+    <div className="delete-item">
+      <form>
+        <div className="d-flex">
+          <input
+            className="field me-3 form-control"
+            type="text"
+            value={id.id}
+          />
+          <button className="px-3 py-1" type="submit">
+            Delete
+          </button>
         </div>
-      </div>
-    </section>
+      </form>
+    </div>
   );
 };
 
-export default DeleteProduct;
+export default DeleteItem;
