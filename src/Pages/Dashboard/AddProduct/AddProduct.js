@@ -188,6 +188,13 @@ const AddProduct = () => {
             <option value="midea">midea</option>
             <option value="gree">gree</option>
             <option value="elite">elite</option>
+            <option value="intel">intel</option>
+            <option value="amd">AMD</option>
+            <option value="corsair">Corsair</option>
+            <option value="gigabyte">Gigabyte</option>
+            <option value="msi">MSI</option>
+            <option value="netac">Netac</option>
+            <option value="transcend">Transcend</option>
           </Form.Select>
         </div>
 
@@ -209,7 +216,7 @@ const AddProduct = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="danger" type="submit">
           Submit
         </Button>
       </Form>

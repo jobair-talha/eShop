@@ -54,7 +54,7 @@ function App() {
             <Route path="product-list" element={<ProductList />} />
             <Route path="update" element={<UpdateProduct />} />
             <Route path="update/:id" element={<UpdateProduct />} />
-            <Route path="delete/:id" element={<DeleteProduct />} />
+            <Route path="delete/:key" element={<DeleteProduct />} />
           </Route>
         </Routes>
       </Router>

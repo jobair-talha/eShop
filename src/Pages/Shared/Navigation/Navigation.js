@@ -50,6 +50,9 @@ const Navigation = () => {
 
           <NavDropdown title="Components" id="collasible-nav-dropdown">
             <NavDropdown.Item as={Link} to="/components">
+              All
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/components/processor">
               Processor
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/components/cpu-cooler">

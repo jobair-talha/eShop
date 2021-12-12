@@ -9,7 +9,6 @@ const UpdateProduct = () => {
     setSuccess(false);
   };
   const { id } = useParams();
-
   useEffect(() => {
     fetch(`http://localhost:4000/product/${id}`)
       .then((res) => res.json())
@@ -210,6 +209,13 @@ const UpdateProduct = () => {
             <option value="midea">midea</option>
             <option value="gree">gree</option>
             <option value="elite">elite</option>
+            <option value="intel">intel</option>
+            <option value="amd">AMD</option>
+            <option value="elite">elite</option>
+            <option value="gigabyte">Gigabyte</option>
+            <option value="msi">MSI</option>
+            <option value="netac">Netac</option>
+            <option value="transcend">Transcend</option>
           </Form.Select>
         </div>
 
@@ -225,7 +231,7 @@ const UpdateProduct = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="danger" type="submit">
           Submit
         </Button>
       </Form>

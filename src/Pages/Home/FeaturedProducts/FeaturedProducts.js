@@ -20,7 +20,7 @@ import FeaturedImg15 from "../../../images/Featured/smart-watch-48x48.png";
 import FeaturedImg16 from "../../../images/Featured/cable-converter-48x48.png";
 
 const FeaturedProducts = () => {
-  const titleName = "Featured Products";
+  const titleName = "Catagories";
   return (
     <section id="products" className="py-5">
       <Container>
