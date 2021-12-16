@@ -28,6 +28,12 @@ const Header = () => {
               Search
             </Button>
           </Form>
+          <Link className="mx-2" to="/products">
+            Products
+          </Link>
+          <Link className="mx-2" to="/order">
+            My Order
+          </Link>
           {admin && <Link to="/dashboard">Dashboard</Link>}
           {user.email && (
             <button onClick={logout} className="btn ms-3 btn-border">
@@ -43,7 +49,7 @@ const Header = () => {
                 <h5>Account</h5>
                 <p>
                   <Link to="/register">Register</Link> or{" "}
-                  <Link to="login">Login</Link>
+                  <Link to="/login">Login</Link>
                 </p>
               </div>
             </div>

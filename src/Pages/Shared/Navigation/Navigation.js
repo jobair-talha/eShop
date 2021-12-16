@@ -97,7 +97,10 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Monitor" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/desktops">
+            <NavDropdown.Item as={Link} to="/monitor">
+              All Monitor
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/monitor/dell">
               Dell
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/desktops/gaming-pc">

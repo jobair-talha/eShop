@@ -15,6 +15,8 @@ import ProductList from "./Pages/Dashboard/PorductList/ProductList";
 import UpdateProduct from "./Pages/Dashboard/UpdateProduct/UpdateProduct";
 import Orders from "./Pages/Dashboard/Orders/Orders";
 import DeleteProduct from "./Pages/Dashboard/DeleteProduct/DeleteProduct";
+import Products from "./Pages/Products/Products/Products";
+import AllProduct from "./Pages/Products/AllProduct/AllProduct";
 
 function App() {
   return (
@@ -56,6 +58,8 @@ function App() {
             <Route path="update/:id" element={<UpdateProduct />} />
             <Route path="delete/:key" element={<DeleteProduct />} />
           </Route>
+          <Route path="product/:key" element={<Products />} />
+          <Route path="products" element={<AllProduct />} />
         </Routes>
       </Router>
     </AuthProvider>

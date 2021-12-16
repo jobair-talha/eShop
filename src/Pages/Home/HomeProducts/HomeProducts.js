@@ -8,15 +8,15 @@ const HomeProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/products")
+    fetch("http://localhost:4000/homeproducts")
       .then((res) => res.json())
-      .then((data) => setProducts(data.products));
+      .then((data) => setProducts(data));
   }, []);
   return (
-    <section className="py-5">
+    <section>
       <Container>
         <Title titleName={titleName}></Title>
-        <Row xs={1} sm={2} md={3} lg={4} className="g-4">
+        <Row xs={1} sm={2} md={3} lg={4}>
           {products.map((product) => (
             <HomeCard products={product} key={product._id}></HomeCard>
           ))}

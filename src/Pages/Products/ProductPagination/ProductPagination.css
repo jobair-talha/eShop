@@ -1,0 +1,12 @@
+.all-products .card-title {
+  font-size: 16px;
+  color: #000;
+}
+.pagination-btn .btn-danger {
+  background: #df4324 !important;
+}
+
+.pagination-btn .selected {
+  background-color: #cb572f !important;
+  border-color: #cb572f;
+}

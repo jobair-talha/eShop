@@ -1,0 +1,23 @@
+#product .update {
+  border: 1px solid #df4324;
+  background: transparent;
+  color: #df4324;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#product .update:hover {
+  background: #df4324;
+  color: #fff;
+}
+#product input {
+  border: 1px solid #df4324;
+}
+
+#product .order {
+  background: #df4324;
+  border: 1px solid #df4324;
+  color: #fff;
+}

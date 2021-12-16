@@ -195,6 +195,8 @@ const AddProduct = () => {
             <option value="msi">MSI</option>
             <option value="netac">Netac</option>
             <option value="transcend">Transcend</option>
+            <option value="adata">Adata</option>
+            <option value="toshiba">Toshiba</option>
           </Form.Select>
         </div>
 
