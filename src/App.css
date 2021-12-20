@@ -30,3 +30,9 @@ p {
   top: 50%;
   left: 50%;
 }
+.card {
+  border: 1px solid rgb(223 67 36);
+}
+.cursor {
+  cursor: pointer;
+}

@@ -9,7 +9,7 @@ const Products = () => {
   const [product, setProduct] = useState({});
   const key = useParams();
   useEffect(() => {
-    fetch(`http://localhost:4000/product/${key.key}`)
+    fetch(`https://mighty-crag-65021.herokuapp.com/product/${key.key}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [key]);

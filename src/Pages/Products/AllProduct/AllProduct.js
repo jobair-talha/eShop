@@ -8,7 +8,7 @@ import ProductPagination from "../ProductPagination/ProductPagination";
 const AllProduct = () => {
   const [page, setPage] = useState(0);
   const size = 16;
-  const url = `http://localhost:4000/products?page=${page}&&size=${size}`;
+  const url = `https://mighty-crag-65021.herokuapp.com/products?page=${page}&&size=${size}`;
   return (
     <div>
       <Header />

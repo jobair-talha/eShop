@@ -14,6 +14,7 @@ const Banner = () => {
   const settings = {
     dots: true,
     infinite: true,
+    adaptiveHeight: true,
     speed: 500,
     arrows: true,
     autoplay: true,

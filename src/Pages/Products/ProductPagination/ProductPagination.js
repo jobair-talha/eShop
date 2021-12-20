@@ -6,7 +6,6 @@ import "./ProductPagination.css";
 const ProductPagination = ({ url, page, setPage, size }) => {
   const [pageCount, setPageCount] = useState(0);
   const [displayProducts, setDisplayProducts] = useState([]);
-  console.log(displayProducts);
 
   useEffect(() => {
     fetch(url)
@@ -22,7 +21,7 @@ const ProductPagination = ({ url, page, setPage, size }) => {
     <div className="all-products">
       <Row xs={1} sm={2} md={3} lg={4}>
         {displayProducts.map((product) => (
-          <ProductCard product={product}></ProductCard>
+          <ProductCard product={product} key={product._id}></ProductCard>
         ))}
       </Row>
       <div className="pagination-btn">

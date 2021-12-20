@@ -12,7 +12,7 @@ const DeleteItem = () => {
   const id = useParams();
   const key = id.key;
   const handleSubmit = (e) => {
-    fetch(`http://localhost:4000/delete/${key}`, {
+    fetch(`https://mighty-crag-65021.herokuapp.com/delete/${key}`, {
       method: "DELETE",
       body: JSON.stringify(key),
     })

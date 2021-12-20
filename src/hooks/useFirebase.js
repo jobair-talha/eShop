@@ -43,7 +43,6 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setAuthError(error.message);
-        console.log(error);
       })
       .finally(() => setIsLoading(false));
   };
@@ -107,7 +106,7 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/${user.email}`)
+    fetch(`https://mighty-crag-65021.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -126,7 +125,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("http://localhost:4000/users", {
+    fetch("https://mighty-crag-65021.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",

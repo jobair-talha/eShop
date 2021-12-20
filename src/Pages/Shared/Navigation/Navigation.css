@@ -8,3 +8,7 @@ nav .nav-item > a {
 nav .dropdown-toggle::after {
   display: none !important;
 }
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #d94528;
+}

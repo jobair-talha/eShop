@@ -6,6 +6,7 @@ import Register from "./Pages/Login/Register/Register";
 import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import LoginRoute from "./Pages/Login/LoginRoute/LoginRoute";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome/DashboardHome";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
@@ -17,6 +18,11 @@ import Orders from "./Pages/Dashboard/Orders/Orders";
 import DeleteProduct from "./Pages/Dashboard/DeleteProduct/DeleteProduct";
 import Products from "./Pages/Products/Products/Products";
 import AllProduct from "./Pages/Products/AllProduct/AllProduct";
+import Catagories from "./Pages/Products/Catagories/Catagories";
+import DesktopGaming from "./Pages/Products/DesktopGaming/DesktopGaming";
+import SearchProducts from "./Pages/Products/SearchProducts/SearchProducts";
+import OrderProducts from "./Pages/Products/OrderProducts/OrderProducts";
+import UpdateStatus from "./Pages/Products/UpdateStatus/UpdateStatus";
 
 function App() {
   return (
@@ -57,9 +63,21 @@ function App() {
             <Route path="update" element={<UpdateProduct />} />
             <Route path="update/:id" element={<UpdateProduct />} />
             <Route path="delete/:key" element={<DeleteProduct />} />
+            <Route path="update-status/:orderId" element={<UpdateStatus />} />
           </Route>
           <Route path="product/:key" element={<Products />} />
-          <Route path="products" element={<AllProduct />} />
+          <Route path="/products" element={<AllProduct />} />
+          <Route path="/catagories/:catagories" element={<Catagories />} />
+          <Route path="/desktops/:type" element={<DesktopGaming />} />
+          <Route path="/search/:name" element={<SearchProducts />} />
+          <Route
+            path="/order"
+            element={
+              <PrivateRoute>
+                <OrderProducts />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </Router>
     </AuthProvider>

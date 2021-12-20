@@ -20,4 +20,14 @@
   background: #df4324;
   border: 1px solid #df4324;
   color: #fff;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+#product .order:hover {
+  background: transparent;
+  border: 1px solid #df4324;
+  color: #000;
 }

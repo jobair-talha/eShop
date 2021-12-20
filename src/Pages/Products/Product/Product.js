@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import Rating from "react-rating";
 import "./Product.css";
+import useAuth from "../../../hooks/useAuth";
 
 const Product = ({ product }) => {
-  const [count, setCount] = useState(0);
+  const [success, setSuccess] = useState(false);
+  const handleClose = () => setSuccess(false);
+  const { user } = useAuth();
+  const [count, setCount] = useState(1);
   const increse = () => setCount(count + 1);
   const decrese = () => setCount(count - 1);
   const {
@@ -22,9 +26,44 @@ const Product = ({ product }) => {
     brand,
   } = product;
 
+  const orderProduct = {
+    name: name,
+    userName: user.displayName,
+    email: user.email,
+    quantity: count,
+    key: _id,
+    status: "pending",
+  };
+  const handleOnClick = () => {
+    fetch("http://localhost:4000/orders", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          setSuccess(true);
+        }
+      });
+  };
+
   return (
     <section id="product" className="py-5">
       <Container>
+        <Modal
+          show={success}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Body>Your Order Successfully</Modal.Body>
+          <Button variant="danger" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal>
         <Row>
           <Col xs={12} sm={12} md={4} lg={4}>
             <div className="border">
@@ -69,7 +108,9 @@ const Product = ({ product }) => {
                 {<FontAwesomeIcon icon={faPlus} />}
               </button>
             </div>
-            <button className="px-5 py-2 order">Place an Order</button>
+            <button onClick={handleOnClick} className="px-5 py-2 order">
+              Place an Order
+            </button>
           </Col>
         </Row>
       </Container>

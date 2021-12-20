@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Form, FormControl, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../images/Logo/logo.png";
@@ -9,6 +9,14 @@ import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
   const { user, admin, logout } = useAuth();
+  const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    navigate(`/search/${searchText}`);
+    e.preventDefault();
+  };
+
   return (
     <Navbar className="nav-bg" expand="lg">
       <Container>
@@ -17,14 +25,20 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="mx-auto d-flex">
+          <Form onSubmit={handleSubmit} className="mx-auto d-flex">
             <FormControl
               type="search"
               placeholder="Search"
               className="me-2 field"
               aria-label="Search"
+              onChange={(e) => setSearchText(e.target.value)}
             />
-            <Button variant="outline-danger" className="button">
+            <Button
+              as={Link}
+              to={`/search/${searchText}`}
+              variant="outline-danger"
+              className="button"
+            >
               Search
             </Button>
           </Form>

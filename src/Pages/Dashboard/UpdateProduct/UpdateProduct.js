@@ -10,12 +10,12 @@ const UpdateProduct = () => {
   };
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:4000/product/${id}`)
+    fetch(`https://mighty-crag-65021.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
 
-  if (!product) {
+  if (!product.length) {
     return (
       <Spinner animation="border" role="status">
         <span className="visually-hidden">Loading...</span>
@@ -31,7 +31,7 @@ const UpdateProduct = () => {
   };
 
   const handleOnSubmit = (e) => {
-    fetch(`http://localhost:4000/update/${id}`, {
+    fetch(`https://mighty-crag-65021.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

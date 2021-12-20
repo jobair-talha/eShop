@@ -7,49 +7,45 @@ const Navigation = () => {
   return (
     <nav>
       <Container>
-        <Nav
-          className="my-2 my-lg-0 nav-item"
-          style={{ maxHeight: "100px" }}
-          navbarScroll
-        >
+        <Nav className="my-2 my-lg-0 my-1 nav-item" navbarScroll>
           <NavDropdown title="Desktop" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/desktops">
+            <NavDropdown.Item as={Link} to="/catagories/desktop">
               All Desktop
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/desktops/gaming-pc">
+            <NavDropdown.Item as={Link} to="/desktops/gaming-desktop">
               Gaming Desktop
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/desktops/apple-pc">
+            <NavDropdown.Item as={Link} to="/desktops/apple">
               Apple Pc
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/desktops/budge-pc">
+            <NavDropdown.Item as={Link} to="/desktops/budge">
               Budge Pc
             </NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown title="Laptop" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/laptops">
+            <NavDropdown.Item as={Link} to="/catagories/laptop">
               All Laptop
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/laptops/hp-laptop">
+            <NavDropdown.Item as={Link} to="/laptops/hp">
               HP
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/laptops/asus-laptop">
+            <NavDropdown.Item as={Link} to="/laptops/asus">
               Asus
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/laptops/acer-laptop">
+            <NavDropdown.Item as={Link} to="/laptops/acer">
               Acer
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/laptops/apple-laptop">
+            <NavDropdown.Item as={Link} to="/laptops/apple">
               Apple
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/laptops/microsoft-laptop">
+            <NavDropdown.Item as={Link} to="/laptops/microsoft">
               Microsoft
             </NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown title="Components" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/components">
+            <NavDropdown.Item as={Link} to="/catagories/components">
               All
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/components/processor">
@@ -79,7 +75,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="UPS" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/ups">
+            <NavDropdown.Item as={Link} to="/catagories/ups">
               All
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/ups/maxGreen">
@@ -97,7 +93,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Monitor" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/monitor">
+            <NavDropdown.Item as={Link} to="/catagories/monitor">
               All Monitor
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/monitor/dell">
@@ -115,7 +111,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Equipment" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/equipments">
+            <NavDropdown.Item as={Link} to="/catagories/equipment">
               All
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/equipments/gaming-pc">
@@ -133,7 +129,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Tablet" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/tablets">
+            <NavDropdown.Item as={Link} to="/catagories/tablet">
               All Tablets
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/tablets/samsung">
@@ -148,7 +144,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Earphone" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/earphones">
+            <NavDropdown.Item as={Link} to="/catagories/earphone">
               Earphones
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/earphones/UiiSii">
@@ -163,7 +159,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Camera" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/camera">
+            <NavDropdown.Item as={Link} to="/catagories/camera">
               All
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/camera/security-camera">
@@ -175,7 +171,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="TV" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/all-tv">
+            <NavDropdown.Item as={Link} to="/catagories/tv">
               All TV
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/tv/smart">
@@ -190,7 +186,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="AC" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/ac">
+            <NavDropdown.Item as={Link} to="/catagories/ac">
               All Desktop
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/ac/general">
@@ -205,7 +201,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Accessories" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/accessories">
+            <NavDropdown.Item as={Link} to="/catagories/accessories">
               Keyboard
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/accessories/mouse">
@@ -235,7 +231,7 @@ const Navigation = () => {
           </NavDropdown>
 
           <NavDropdown title="Gaming" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/gaming">
+            <NavDropdown.Item as={Link} to="/catagories/gaming">
               Gaming
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/gaming/gaming-chair">

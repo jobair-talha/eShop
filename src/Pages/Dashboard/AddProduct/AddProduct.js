@@ -33,7 +33,7 @@ const AddProduct = () => {
     formData.append("image", image);
     formData.append("details", details);
 
-    fetch("http://localhost:4000/products", {
+    fetch("https://mighty-crag-65021.herokuapp.com/products", {
       method: "POST",
       body: formData,
     })
@@ -44,9 +44,7 @@ const AddProduct = () => {
           e.target.reset();
         }
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   };
 
   return (
