@@ -35,7 +35,7 @@ const Product = ({ product }) => {
     status: "pending",
   };
   const handleOnClick = () => {
-    fetch("http://localhost:4000/orders", {
+    fetch("https://mighty-crag-65021.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

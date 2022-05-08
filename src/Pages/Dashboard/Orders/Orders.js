@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Spinner, Table } from "react-bootstrap";
 import OrderList from "../../OrderList/OrderList";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/orders")
+    fetch("https://mighty-crag-65021.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data.orders));
   }, []);
 
+  if (orders.length === 0) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
+  }
   return (
     <div className="py-4">
       <Table bordered>

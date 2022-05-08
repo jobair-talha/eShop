@@ -11,7 +11,9 @@ const OrderProducts = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/user-orders?email=${user.email}`)
+    fetch(
+      `https://mighty-crag-65021.herokuapp.com/user-orders?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user]);

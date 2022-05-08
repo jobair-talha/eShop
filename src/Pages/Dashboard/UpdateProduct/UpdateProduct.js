@@ -15,13 +15,6 @@ const UpdateProduct = () => {
       .then((data) => setProduct(data));
   }, [id]);
 
-  if (!product.length) {
-    return (
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </Spinner>
-    );
-  }
   const handleOnChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -46,7 +39,13 @@ const UpdateProduct = () => {
       });
     e.preventDefault();
   };
-
+  if (!product) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
+  }
   return (
     <div>
       <Modal

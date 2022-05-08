@@ -16,7 +16,8 @@ const ProductPagination = ({ url, page, setPage, size }) => {
         const pageNumber = Math.ceil(count / size);
         setPageCount(pageNumber);
       });
-  }, [page]);
+  }, [page, url, page, size]);
+  window.scroll(0, 0);
   return (
     <div className="all-products">
       <Row xs={1} sm={2} md={3} lg={4}>

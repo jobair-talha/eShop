@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Spinner, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
@@ -9,6 +9,14 @@ const ProductList = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+  if (products.length === 0) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
+  }
 
   return (
     <Table responsive>

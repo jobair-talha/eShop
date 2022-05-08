@@ -11,7 +11,7 @@ const UpdateStatus = () => {
   const orderId = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/order/${orderId.orderId}`)
+    fetch(`https://mighty-crag-65021.herokuapp.com/order/${orderId.orderId}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orderId?.orderId]);
@@ -25,7 +25,7 @@ const UpdateStatus = () => {
   };
 
   const handleOnSubmit = (e) => {
-    fetch(`http://localhost:4000/orders/${orderId.orderId}`, {
+    fetch(`https://mighty-crag-65021.herokuapp.com/orders/${orderId.orderId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
